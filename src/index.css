@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* Custom global styles */
+/* body,
+html,
+#root,
+.App {
+  @apply min-h-screen font-sans bg-gray-100 text-gray-800;
+}
+
+input,
+textarea,
+select,
+button {
+  @apply font-sans;
+}
+
+#invoiceCapture {
+  user-select: none;
+}
+
+table th,
+table td {
+  @apply text-left;
+}
+
+.table tr th:first-child,
+.table tr td:first-child {
+  @apply pl-0;
+}
+
+.table tr th:last-child,
+.table tr td:last-child {
+  @apply pr-0;
+} */
