@@ -1,16 +1,53 @@
-# React + Vite
+# Invoice Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **frontend-only React application** to generate, download, and send invoices. Built with **React**, **Tailwind CSS**, **html2canvas**, and **jsPDF**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Screenshots
 
-## React Compiler
+![Home page](./public/home.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![Home page](./public/review.png)
 
-## Expanding the ESLint configuration
+![Home page](./public/downloadPdf.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- Generate invoice previews dynamically.
+- Download invoices as **PDF**.
+- Responsive design with **Tailwind CSS**.
+- Simple and clean modal overlay for invoice preview.
+
+---
+
+## Tech Stack
+
+- **React** - Frontend UI
+- **Tailwind CSS** - Styling
+- **html2canvas / html2canvas-pro** - Capture invoice as image
+- **jsPDF** - Generate PDF from captured invoice
+- **Lucide Icons** - UI icons
+
+---
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/dev-debabrata/invoice-generator-react.git
+cd invoice-generator
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm start
+```

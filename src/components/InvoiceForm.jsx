@@ -301,7 +301,7 @@ const InvoiceForm = () => {
           {/* Review Button */}
           <button
             type="submit"
-            className="w-full text-base bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md"
+            className="w-full text-base bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md cursor-pointer"
           >
             Review Invoice
           </button>

@@ -39,7 +39,7 @@ const InvoiceItem = ({ items, onItemizedItemEdit, currency, onRowDel, onRowAdd }
 
 const ItemRow = ({ item, onItemizedItemEdit, onDelEvent, currency }) => (
   <tr className="border-b border-gray-400 align-top">
-    <td className="py-2 w-[65%]">
+    <td className="px-2 py-2 w-[65%]">
       <EditableField
         cellData={{ type: "text", name: "name", placeholder: "Item name", value: item.name, id: item.id }}
         onItemizedItemEdit={onItemizedItemEdit}
@@ -49,19 +49,19 @@ const ItemRow = ({ item, onItemizedItemEdit, onDelEvent, currency }) => (
         onItemizedItemEdit={onItemizedItemEdit}
       />
     </td>
-    <td className="py-2 w-[8%]">
+    <td className="px-2 py-2 w-[8%]">
       <EditableField
         cellData={{ type: "number", name: "quantity", value: item.quantity, id: item.id, min: 1 }}
         onItemizedItemEdit={onItemizedItemEdit}
       />
     </td>
-    <td className="py-2 w-[15%] text-right">
+    <td className="px-2 py-2 w-[15%] text-right">
       <EditableField
         cellData={{ type: "number", name: "price", value: item.price, id: item.id, min: 1, leading: currency, textAlign: "text-right" }}
         onItemizedItemEdit={onItemizedItemEdit}
       />
     </td>
-    <td className="py-3 w-[8%] text-center">
+    <td className="px-2 py-3 w-[8%] text-center">
       <button onClick={() => onDelEvent(item)} className="bg-red-600 hover:bg-red-700 p-2 rounded-lg text-white cursor-pointer">
         <Trash2 size={16} />
       </button>
