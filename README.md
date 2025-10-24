@@ -10,7 +10,7 @@ A **frontend-only React application** to generate, download, and send invoices. 
 
 ![Home page](./public/review.png)
 
-![Home page](./public/downloadPdf.png)
+![Home page](./public/downloadPDF.png)
 
 ## Features
 

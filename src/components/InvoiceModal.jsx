@@ -111,6 +111,7 @@ const InvoiceModal = ({
           <table className="w-full border border-gray-300 text-sm">
             <thead className="bg-gray-100">
               <tr>
+                <th className=" w-[4%] border px-2 py-1 text-left">SL No.</th>
                 <th className="border px-2 py-1 text-left">Item</th>
                 <th className="border px-2 py-1 text-center">Qty</th>
                 <th className="border px-2 py-1 text-right">Price</th>
@@ -118,12 +119,13 @@ const InvoiceModal = ({
               </tr>
             </thead>
             <tbody>
-              {items.map((item) => (
-                <tr key={item.id} className="border-b">
-                  <td className="px-2 py-1">{item.name} - {item.description}</td>
-                  <td className="px-2 py-1 text-center">{item.quantity}</td>
-                  <td className="px-2 py-1 text-right">{currency}{item.price}</td>
-                  <td className="px-2 py-1 text-right">
+              {items.map((item, index) => (
+                <tr key={item.id} className="border">
+                  <td className="px-2 py-1 border text-center">{index + 1}</td>
+                  <td className="px-2 py-1 border">{item.name} - {item.description}</td>
+                  <td className="px-2 py-1 border text-center">{item.quantity}</td>
+                  <td className="px-2 py-1 border text-right">{currency}{item.price}</td>
+                  <td className="px-2 py-1 border text-right">
                     {currency}{(item.price * item.quantity).toFixed(2)}
                   </td>
                 </tr>

@@ -8,16 +8,18 @@ const InvoiceItem = ({ items, onItemizedItemEdit, currency, onRowDel, onRowAdd }
       <table className="w-full border-y border-gray-400 table-fixed">
         <thead>
           <tr className="text-left text-sm border-y border-gray-400">
-            <th className="py-2 w-[65%]">ITEM</th>
-            <th className="py-2 w-[8%]">QTY</th>
-            <th className="py-2 w-[15%]">PRICE/RATE</th>
-            <th className="py-2 w-[8%] text-center">ACTION</th>
+            <th className="py-2 w-[4%]">SL No.</th>
+            <th className="py-2 w-[65%]">Item</th>
+            <th className="py-2 w-[8%]">Qty</th>
+            <th className="py-2 w-[15%]">Price/Rate</th>
+            <th className="py-2 w-[8%] text-center">Action</th>
           </tr>
         </thead>
         <tbody>
-          {items.map((item) => (
+          {items.map((item, index) => (
             <ItemRow
               key={item.id}
+              index={index}
               item={item}
               onItemizedItemEdit={onItemizedItemEdit}
               onDelEvent={onRowDel}
@@ -37,9 +39,10 @@ const InvoiceItem = ({ items, onItemizedItemEdit, currency, onRowDel, onRowAdd }
   );
 };
 
-const ItemRow = ({ item, onItemizedItemEdit, onDelEvent, currency }) => (
+const ItemRow = ({ item, index, onItemizedItemEdit, onDelEvent, currency }) => (
   <tr className="border-b border-gray-400 align-top">
-    <td className="px-2 py-2 w-[65%]">
+    <td className="pr-2 py-2 w-[4%] text-center font-semibold">{index + 1}</td>
+    <td className="pr-2 py-2 w-[65%]">
       <EditableField
         cellData={{ type: "text", name: "name", placeholder: "Item name", value: item.name, id: item.id }}
         onItemizedItemEdit={onItemizedItemEdit}
